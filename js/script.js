@@ -13,12 +13,14 @@ function buttons() {
 }
 
 function btnFunction(option) {
-  console.log(option.charAt(index))
   if (array1.includes(option.charAt(index))) {
-    console.log(option.charAt(index), 'ya fue escrito');
+    if((flag[index] - index) == option.charAt(index)){
+      console.log('el numero: ', parseInt((option.charAt(index))+index), ' ya fue escrito');
+    }else {
+      console.log('la letra: ',option.charAt(index), ' ya fue escrita');
+    }
   }
   else {
-    console.log('Array LETTERS: ', LETTERS[flag[index]], 'caracter ingresado: ', option.charAt(index))
     if (LETTERS[flag[index]] == option.charAt(index) || flag[index] == option.charAt(index)) {
       array1[flag[index]] = option.charAt(index);
       if (flag[index] == array1[flag[index]])
