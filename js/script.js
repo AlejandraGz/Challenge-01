@@ -1,7 +1,7 @@
 const LETTERS = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'];
 let array1 = [];
 let htmlButton = '';
-let htmlCharacter = '';
+let htmlCharacter = [letter = '', number = '']
 let flag = [letter = 0, number = 0]
 let index = 0;
 let size = (LETTERS.length) - 1;
@@ -14,20 +14,24 @@ function buttons() {
 
 function btnFunction(option) {
   if (array1.includes(option.charAt(index))) {
-    if((flag[index] - index) == option.charAt(index)){
-      console.log('el numero: ', parseInt((option.charAt(index))+index), ' ya fue escrito');
-    }else {
-      console.log('la letra: ',option.charAt(index), ' ya fue escrita');
+    if ((flag[index] - index) == option.charAt(index)) {
+      console.log('el numero: ', parseInt((option.charAt(index)) + index), ' ya fue escrito');
+    } else {
+      console.log('la letra: ', option.charAt(index), ' ya fue escrita');
     }
   }
   else {
     if (LETTERS[flag[index]] == option.charAt(index) || flag[index] == option.charAt(index)) {
       array1[flag[index]] = option.charAt(index);
-      if (flag[index] == array1[flag[index]])
-        htmlCharacter += (parseInt(array1[flag[index]]) + index);
-      else
-        htmlCharacter += (array1[flag[index]]);
-      document.getElementById('letrasId').innerHTML = htmlCharacter;
+      if (flag[index] == array1[flag[index]]) {
+        htmlCharacter[index] += (parseInt(array1[flag[index]]) + index);
+        document.getElementById('numerosId').innerHTML = htmlCharacter[index];
+      }
+      else {
+        htmlCharacter[index] += (array1[flag[index]]);
+        document.getElementById('letrasId').innerHTML = htmlCharacter[index];
+      }
+
       flag[index] += 1;
     } else { console.log('Siga el orden por favor') }
   }

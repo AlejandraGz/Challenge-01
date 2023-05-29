@@ -1,3 +1,15 @@
-section {
-  width: 200px;
+body {
+  height: 100vh;
+  background-color: #f1f1f1be;
+  display: flex;
+  align-items: center;
+}
+.container {
+  box-shadow: 0px 10px 15px -3px #0000001a;
+  background-color: white;
+  border-radius: 25px;
+  width: 50%;
+  height: 50%;
+  justify-content: center;
+  padding: 15% 0 20% 0;
 }
