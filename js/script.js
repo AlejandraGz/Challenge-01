@@ -15,9 +15,9 @@ function buttons() {
 function btnFunction(option) {
   if (array1.includes(option.charAt(index))) {
     if ((flag[index] - index) == option.charAt(index)) {
-      console.log('el numero: ', parseInt((option.charAt(index)) + index), ' ya fue escrito');
+      alert('el numero: ', parseInt((option.charAt(index)) + index), ' ya fue escrito');
     } else {
-      console.log('la letra: ', option.charAt(index), ' ya fue escrita');
+      alert('la letra: ', option.charAt(index), ' ya fue escrita');
     }
   }
   else {
@@ -33,7 +33,7 @@ function btnFunction(option) {
       }
 
       flag[index] += 1;
-    } else { console.log('Siga el orden por favor') }
+    } else { alert('Siga el orden por favor') }
   }
   if (array1[size] == LETTERS[size]) {
     index = 1;
