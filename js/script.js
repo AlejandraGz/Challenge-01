@@ -15,9 +15,9 @@ function buttons() {
 function btnFunction(option) {
   if (array1.includes(option.charAt(index))) {
     if ((flag[index] - index) == option.charAt(index)) {
-      alert('Ese número  ya fue escrito');
+      alert('Ese número ya fue escrito');
     } else {
-      alert('Esa letra  ya fue escrita');
+      alert('Esa letra ya fue escrita');
     }
   }
   else {
